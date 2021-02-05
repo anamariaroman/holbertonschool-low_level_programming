@@ -1,12 +1,16 @@
 #include <stdio.h>
+#include <time.h>
+#include <stdio.h>
+
 /**
  * main - print numbers
  * description: use while
  * Return: void
  */
+
 int main(void)
 {
-	int a < (48);
+	int a(48);
 
 	while (a < 58)
 	{
