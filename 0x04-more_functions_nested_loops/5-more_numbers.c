@@ -9,21 +9,18 @@
 
 void more_numbers(void)
 {
-	char a, b, x, i;
+	int i, b;
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i <= 10; i++)
 	{
-		for (x = 0; x <= 14; x++)
+		for (b = 0; b <= 14; b++)
 		{
-			if (x < 10)
-				b = x;
-			else
+			if (b >= 10)
 			{
-				a = x / 10; b = x % 10;
-				_putchar('0' + a);
+				_putchar(i / 10 + '0');
 			}
-			_putchar('0' + b);
+			_putchar(b % 10 + '0');
 		}
-		_putchar('\n');
+		_putchar(10);
 	}
 }
