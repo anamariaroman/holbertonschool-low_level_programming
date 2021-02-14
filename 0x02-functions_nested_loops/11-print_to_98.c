@@ -1,35 +1,46 @@
-#include "holberton.h"
 #include <stdio.h>
 /**
- * print_last_digit - computes the absolute value of an integer
- * @n: x integer
- * Description: print the sign of a number
- * Return: LastDigit (Success)
+ * print_to_98 - print to 98
+ * @n: number
+ * Description: print to 98
+ * Return: void
+ *
 */
-void print_to_98(int n);
+void print_to_98(int n)
 {
-	if (n <= 98)
+	int i;
+
+	if (n < 98)
 	{
-		for (; n <= 98; n++)
+		for (i = n ; i <= 98 ; i++)
 		{
-			printf("%d", n)
-				if (n < 98)
-				{
-					printf(", ");
-				}
+			if (i <= 97)
+			{
+				printf("%i, ", i);
+			}
+			else
+			{
+				printf("%i", i);
+			}
 		}
-		printf('\n');
 	}
 	else if (n > 98)
 	{
-		for (; n >= 98; n--)
+		for (i = n ; i >= 98 ; i--)
 		{
-			printf("%d", n);
-			if (n > 98)
+			if (i > 98)
 			{
-				printf(", ");
+				printf("%i, ", i);
 			}
-			print('\n');
+			else
+			{
+				printf("%i", i);
+			}
 		}
 	}
+	else if (n == 98)
+	{
+		printf("%i", n);
+	}
+	printf("\n");
 }
