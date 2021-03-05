@@ -15,17 +15,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s1 == NULL || s1 == '\0')
 		lens1 = 0;
 	else
-	{
 		for (i = 0; s1[i] != '\0'; i++)
 			lens1++;
-	}
 	if (s2 == NULL || s2 == '\0')
 		lens2 = 0;
 	else
-	{
 		for (i = 0; s2[i] != '\0'; i++)
 			lens2++;
-	}
 	if (n >= lens2)
 		n = lens2;
 	arr = malloc(sizeof(char) * (lens1 + n + 1));
