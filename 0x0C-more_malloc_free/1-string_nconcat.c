@@ -1,42 +1,40 @@
-#include "holberton.h"
 #include <stdlib.h>
-
+#include "holberton.h"
 /**
- * string_nconcat - concatenates two strings.
- * @s1: first string to copy
- * @s2: second string to copy
- * @n: number of bytes of s2 to copy
- *
- * Return: char pointer to newly allocated place in memory
+ * string_nconcat - string concate
+ * @s1: char 1
+ * @s2: char2
+ * @n: unsigned int
+ * Return: char
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, j, k;
-	char *s;
+	unsigned int lens1 = 0, lens2 = 0, i, j = 0;
+	char *arr;
 
-	if (s1 == NULL)
-		i = 0;
+	if (s1 == NULL || s1 == '\0')
+		lens1 = 0;
 	else
 	{
-		for (i = 0; s1[i]; i++)
-			;
+		for (i = 0; s1[i] != '\0'; i++)
+			lens1++;
 	}
-	if (s2 == NULL)
-		j = 0;
+	if (s2 == NULL || s2 == '\0')
+		lens2 = 0;
 	else
 	{
-		for (j = 0; s2[j]; j++)
-			;
+		for (i = 0; s2[i] != '\0'; i++)
+			lens2++;
 	}
-	if (j > n)
-		j = n;
-	s = malloc(sizeof(char) * (i + j + 1));
-	if (s == NULL)
+	if (n >= lens2)
+		n = lens2;
+	arr = malloc(sizeof(char) * (lens1 + n + 1));
+	if (arr == NULL)
 		return (NULL);
-	for (k = 0; k < i; k++)
-		s[k] = s1[k];
-	for (k = 0; k < j; k++)
-		s[k + i] = s2[k];
-	s[i + j] = '\0';
-	return (s);
+	for (i = 0; i < lens1; i++)
+		arr[i] = s1[i];
+	for (i = lens1; i < lens1 + n; i++, j++)
+		arr[i] = s2[j];
+	arr[lens1 + n] = '\0';
+	return (arr);
 }
