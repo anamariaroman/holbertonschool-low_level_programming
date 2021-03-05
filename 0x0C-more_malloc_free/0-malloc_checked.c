@@ -1,22 +1,27 @@
 #include <stdlib.h>
 #include "holberton.h"
+#include <stdio.h>
+
 /**
- * malloc_checked - asing memory
- * @b: unsigned int
- * Return: void
- */
+ * malloc_checked - function that allocates memory using malloc
+ * @b: number of arguments
+ *
+ * Return: 98 provided it fails, a otherwise.
+*/
 void *malloc_checked(unsigned int b)
 {
-	char *arr;
+	char *a;
 
 	if (b == 0)
 	{
 		return (NULL);
 	}
-	arr = malloc(b);
-	if (arr == NULL)
+
+	a = malloc(b);
+
+	if (a == NULL)
 	{
 		exit(98);
 	}
-	return (arr);
+	return (a);
 }
