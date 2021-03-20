@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
-* add_node_end - print lenght struct
+* add_node_end - print lenght the struct list
 * @head: ptr structure
 * @str: string arg
 * Return: list
