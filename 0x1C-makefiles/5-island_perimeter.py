@@ -21,5 +21,4 @@ def island_perimeter(grid):
                         sum = sum - 1
                 if a + 1 < len(grid[i]):
                     sum = sum - grid[i][a + 1]
-                    sum +1
     return sum
