@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" island perimeter """
+""" Module island_perimeter """
 
 
 def island_perimeter(grid):
-    """ Return the perimeter island """
+    """ Function that return the perimeter island """
 
     len_x = len(grid)
     len_y = len(grid[0])
